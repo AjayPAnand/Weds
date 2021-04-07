@@ -62,23 +62,26 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Me</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">ABOUT</a></li>
         <li><a href="#">LIFE</a></li>
         <li><a href="#">WHERE</a></li>
+        <li><a href="#">CONTACT</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- First Container -->
-<div class="container-fluid bg-1 text-center hover-zoom">
-  <h3 class="margin">Save the date</h3>
-  <img src="first.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="450" height="450">
+<div class="container-fluid bg-1 text-center">
+  <h3 style="">Unni Weds Akhila</h3>
+  <img src="first.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="550" height="550">
   <h3>Join us on 23rd May</h3>
+  <div class="">
+    <p class="h3" id="countdown"></p>  
+  </div>
 </div>
 
 <!-- Second Container -->
@@ -92,18 +95,50 @@
   <h3 class="margin">Location</h3><br>
   <div class="row">
     <div class="col-sm-4">
-      <p>Address : </p>
-      <a href="https://www.google.com/maps/place/Thuravoor,+Thuravoor+Thekku,+Kerala/@9.7677416,76.2956316,14z/data=!3m1!4b1!4m5!3m4!1s0x3b087af4b9df7c7b:0x7470f2f000cec138!8m2!3d9.7704378!4d76.3203091">Direction</a>
+      <p class="h4">Address : </p>
+      <a class="bg-2" href="https://www.google.com/maps/place/Thuravoor,+Thuravoor+Thekku,+Kerala/@9.7677416,76.2956316,14z/data=!3m1!4b1!4m5!3m4!1s0x3b087af4b9df7c7b:0x7470f2f000cec138!8m2!3d9.7704378!4d76.3203091">Direction</a>
     </div>  
-  </div>
+  </div>   
 </div>
+
+
 
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
   <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
 </footer>
 
-  
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("May 23, 2021 10:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
   
 </body>
 </html>
