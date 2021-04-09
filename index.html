@@ -13,6 +13,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
+ html {
+  scroll-behavior: smooth;
+}
   body {
     font: 20px Montserrat, sans-serif;
     line-height: 1.8;
@@ -73,9 +76,9 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a class="ts-4" href="#">ABOUT</a></li>
-        <li><a href="#">LIFE</a></li>
-        <li><a href="#">WHERE</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="#Life">LIFE</a></li>
+        <li><a href="#Direction">WHERE</a></li>
+        <li><a href="#Contact">CONTACT</a></li>
       </ul>
     </div>
   </div>
@@ -89,13 +92,13 @@
   <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="item active" data-interval="1000"  pause="false" ride="carousel">
-        <img src="second.jpg" class="d-block img-responsive img-circle margin" alt="first">
+        <img src="second.jpg" class="img-responsive img-rounded center-block" alt="first">
     </div>
     <div class="item" data-interval="1000" pause="false">
-      <img src="first.jpg" class="d-block w-500 h-500 img-responsive img-circle margin" alt="second">
+      <img src="first.jpg" class="img-responsive img-rounded center-block" alt="second">
     </div>
     <div class="item" data-interval="1000" pause="false">
-      <img src="third.jpg" class="d-block w-500 h-300 img-responsive img-circle margin" alt="Third">
+      <img src="third.jpg" class="img-responsive img-rounded center-block" alt="Third">
     </div>
   </div>
 </div>
@@ -119,8 +122,8 @@
   <div class="row">
     <div class="col-sm-4">
       <p class="h4">Address : </p>
-      <a class="bg-2" href="https://www.google.com/maps/place/Thuravoor,+Thuravoor+Thekku,+Kerala/@9.7677416,76.2956316,14z/data=!3m1!4b1!4m5!3m4!1s0x3b087af4b9df7c7b:0x7470f2f000cec138!8m2!3d9.7704378!4d76.3203091">Direction</a>
-    </div>  
+      <a name="Direction" class="btn btn-lg active" href="https://www.google.com/maps/place/Thuravoor,+Thuravoor+Thekku,+Kerala/@9.7677416,76.2956316,14z/data=!3m1!4b1!4m5!3m4!1s0x3b087af4b9df7c7b:0x7470f2f000cec138!8m2!3d9.7704378!4d76.3203091">Direction</a>
+   </div>  
   </div>   
 </div>
 
